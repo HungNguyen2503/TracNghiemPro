@@ -4,12 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "json-server --watch db.json --port 4000"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^1.0.0-beta.3"
+    "json-server": "^0.17.4"
   },
   "devDependencies": {},
   "keywords": [],
