@@ -25,43 +25,53 @@
   "topics": [
     {
       "id": 1,
-      "name": "HTML & Cấu trúc Web"
+      "name": "HTML & Cấu trúc Web",
+      "icon": "FaHtml5"
     },
     {
       "id": 2,
-      "name": "CSS & Thiết kế Giao diện"
+      "name": "CSS & Thiết kế Giao diện",
+      "icon": "FaCss3Alt"
     },
     {
       "id": 3,
-      "name": "JavaScript Cơ bản"
+      "name": "JavaScript Cơ bản",
+      "icon": "IoLogoJavascript"
     },
     {
       "id": 4,
-      "name": "ReactJS & Xây dựng Component"
+      "name": "ReactJS & Xây dựng Component",
+      "icon": "RiReactjsFill"
     },
     {
       "id": 5,
-      "name": "Kiến trúc & Hiệu năng Frontend"
+      "name": "Kiến trúc & Hiệu năng Frontend",
+      "icon": "GrDocumentPerformance"
     },
     {
       "id": 6,
-      "name": "Công cụ & Môi trường Phát triển"
+      "name": "Công cụ & Môi trường Phát triển",
+      "icon": "FaTools"
     },
     {
       "id": 7,
-      "name": "Quản lý State & Data Fetching"
+      "name": "Quản lý State & Data Fetching",
+      "icon": "FaDatabase"
     },
     {
       "id": 8,
-      "name": "Testing & Debugging Frontend"
+      "name": "Testing & Debugging Frontend",
+      "icon": "FaBug"
     },
     {
       "id": 9,
-      "name": "Thiết kế Responsive & UI/UX"
+      "name": "Thiết kế Responsive & UI/UX",
+      "icon": "FaMobileAlt"
     },
     {
       "id": 10,
-      "name": "Kiến thức Mạng & Bảo mật Web"
+      "name": "Kiến thức Mạng & Bảo mật Web",
+      "icon": "FaShieldAlt"
     }
   ],
   "questions": [
