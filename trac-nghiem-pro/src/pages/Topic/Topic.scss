@@ -1,0 +1,114 @@
+.topic{
+  padding: 0rem 0rem 0rem 3rem;
+  display: flex;
+  min-height: 90vh;
+  
+  &__header{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    text-align: center;
+    color: #3B82F6;
+  }
+
+  &__content{
+    width: 70%;
+    position: relative;
+    padding: 1rem 3rem 1rem 0;
+  }
+
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem 0;
+    color: #3B82F6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__item{
+    width: calc(50% - 0.5rem);
+    padding: 1rem;
+    background-color: #f3f4f693;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+
+    &:hover{
+      transform: translateY(-5px);
+    }
+    span{
+      display: block;
+      font-size: 5rem;
+      color: #3B82F6;
+      background-color: #F3D4F7;
+      border-radius: 50%;
+      width: 8rem;
+      height: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    h3{
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3B82F6;
+      margin-bottom: 0.5rem;
+      text-align: center;
+
+    }
+    button{
+      padding: 0.5rem 1rem;
+      background-color: #3B82F6;
+      color: white;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      font-size: 1.2rem;
+
+      &:hover{
+        background-color: #0048e3;
+      }
+    }
+  }
+
+  &__info{
+    width: 30%;
+    padding: 3rem 1rem;
+    background-color: #f3f4f693;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  &__info-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__avatar{
+    width: 10rem;
+    height: 10rem;
+    aspect-ratio: 1/1;
+    font-size: 6rem;
+    color: #F3D4F7;
+    margin-bottom: 1rem;
+    background-color: #3B82F6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__fullname, &__email{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #3B82F6;
+  }
+}

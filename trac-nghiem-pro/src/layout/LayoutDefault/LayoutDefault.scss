@@ -1,0 +1,150 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3rem;
+  border: #ccc solid 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(45deg, #EBEFFF 15%, #AFB3FF 110%);
+  height: 4rem;
+  z-index: 1000;
+
+  &__logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3B82F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    cursor: pointer;
+  }
+
+  &__logo-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #3B82F6;
+  }
+
+  &__link{
+    color: #EBEFFF;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  &__link:hover{
+    color: #3B82F6;
+    background-color: #ebefff80;
+    border-radius: 0.5em;
+  }
+
+  &__nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    &--active{
+      color: #3B82F6;
+    }
+  }
+
+  &__logout{
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    padding: 0.3em;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    color: #EBEFFF;
+
+    svg{
+      stroke-width: 3;
+    }
+  }
+  &__logout:hover{
+    color: #3B82F6;
+  }
+}
+
+.main{
+  position: relative;
+  padding-top: 4rem;
+  background-image: url('../../../public/assets/images/bg_home.png');
+  background-size: cover;
+}
+
+.footer{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+  border-top: #ccc solid 1px;
+  background: linear-gradient(45deg, #AFB3FF 15%, #EBEFFF 110%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  color: #3B82F6;
+
+  h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #3B82F6;
+  }
+
+  > div{
+    width: 20%;
+
+    @media (max-width: 992px) {
+      width: 40%;
+    }
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+
+  a{
+    color: #3B82F6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover{
+      color: #EBEFFF;
+    }
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__socials{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    .footer__icon-social{
+      font-size: 1.8rem;
+      color: #3B82F6;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover{
+        color: #EBEFFF;
+      }
+    }
+  }
+}

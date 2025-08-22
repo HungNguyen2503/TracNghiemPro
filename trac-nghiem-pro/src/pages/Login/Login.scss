@@ -1,0 +1,149 @@
+.login{
+  display: flex;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(45deg, #EBEFFF 15%, #AFB3FF 110%);
+  overflow: hidden;
+
+  &__left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1000;
+    }
+  }
+  
+  &__form{
+    z-index: 10;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5rem;
+
+    label, input{
+      color: #646ED3;
+      width: 100%;
+      outline: none;
+    }
+    input{
+      margin: 0.5em 0;
+      padding: 0.3em 1em;
+      border-radius: 30px;
+      border: #646ED3 2px solid;
+      font-size: 1rem;
+      
+    }
+    input:focus{
+      caret-color: #646ED3;
+    }
+
+    p{
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+
+      a{
+        font-weight: 700;
+        color: #646ED3;
+        text-decoration: none;
+        margin-left: 3px;
+      }
+    }
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  &__title{
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+    color: #646ED3;
+  }
+
+
+
+  &__socials{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icon{
+    color: #646ED3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  &__logo{
+    width: 50%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      object-position: center;
+      transform: scale();
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__blob-shape{
+    width: 10%;
+    height: 60%;
+    background-color: #AFB3FF;
+    border-radius: 3rem;
+    box-shadow: #838CF0 -3px -1px 1px 3px;
+    position: absolute;
+    bottom: -25%;
+    left: 0%;
+    transform: rotate(45deg);
+
+    @media (max-width: 992px) {
+      width: 10%;
+      height: 55%;
+    }
+
+    @media (max-width: 768px) {
+      width: 20%;
+    }
+
+    @media (max-width: 576px) {
+      width: 25%;
+      height: 50%;
+    }
+  }
+
+  input.login__submit{
+    background-color: #646ED3;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    background: linear-gradient(45deg, #EBEFFF 15%, #AFB3FF 110%);
+  }
+}
+
+

@@ -1,0 +1,130 @@
+.home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+
+  &__welcome {
+    color: #3B82F6;
+    margin-bottom: 1rem;
+  }
+
+  &__search {
+    width: 60%;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    position: relative;
+    
+    input {
+      width: 100%;
+      padding: 0.6em 1em;
+      border: 1px solid #3B82F6;
+      border-radius: 5px;
+      font-size: 1rem;
+      outline: none;
+      background-color: #3b83f6d0;
+      color: #fff;
+    }
+
+    input:focus {
+      caret-color: #fff;
+    }
+
+    input::placeholder {
+      color: #fff;
+    }
+
+    span{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  &__popular-topics {
+    width: 60%;
+    max-width: 600px;
+
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #3B82F6;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;          
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+  
+  &__topic-item {
+    display: flex;
+    flex: 0 0 30%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d2d5dc;
+    border-radius: 0.6rem;
+    padding: 2rem 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+
+  &__topic-item:hover {
+    background-color: #132B52;
+  }
+  
+  &__topic-item:hover &__topic-icon {
+    color: #fff;
+    background-color: #3B82F6;
+  }
+  &__topic-icon {
+    font-size: 2.2rem;
+    color: #3B82F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.6rem;
+    transition: all 0.3s ease;
+  }
+  
+  &__topic-name{
+    font-size: 1rem;
+    color: #3B82F6;
+    font-weight: 600;
+  }
+
+  &__topic-item:hover &__topic-name {
+    color: #fff;
+  }
+  
+  &__random-challenge{
+    padding: 0.6em 1.5em;
+    background-color: #3B82F6;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 3rem;
+  }
+  &__random-challenge:hover {
+    background-color: #3b83f6cd;
+  }
+}
