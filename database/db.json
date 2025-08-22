@@ -4878,42 +4878,326 @@
   ],
   "userAnswers": [
     {
-      "id": 1,
+      "answers": [
+        {
+          "id": 51,
+          "select": 0,
+          "result": false
+        },
+        {
+          "id": 49,
+          "select": 2,
+          "result": true
+        },
+        {
+          "id": 79,
+          "select": 2,
+          "result": false
+        },
+        {
+          "id": 46,
+          "select": 1,
+          "result": true
+        },
+        {
+          "id": 70,
+          "select": 2,
+          "result": false
+        }
+      ],
       "userId": 1,
-      "topicId": 1,
-      "questionId": 1,
-      "userAnswerIndex": 0
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "topicId": 1,
-      "questionId": 2,
-      "userAnswerIndex": 0
-    },
-    {
-      "id": 3,
-      "userId": 2,
       "topicId": 2,
-      "questionId": 41,
-      "userAnswerIndex": 1
+      "level": "Easy",
+      "numQuestions": 5,
+      "timeLimit": 450,
+      "submittedAt": "2025-08-21T06:17:39.632Z",
+      "id": 1
     },
     {
-      "id": 4,
-      "userId": 3,
-      "topicId": 3,
-      "questionId": 81,
-      "userAnswerIndex": 2
+      "answers": [
+        {
+          "id": 69,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 59,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 53,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 50,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 74,
+          "select": -1,
+          "result": false
+        }
+      ],
+      "userId": 1,
+      "topicId": 2,
+      "level": "Easy",
+      "numQuestions": 5,
+      "timeLimit": 450,
+      "submittedAt": "2025-08-21T14:35:13.466Z",
+      "id": 2
     },
     {
-      "id": 5,
+      "answers": [
+        {
+          "id": 57,
+          "select": 2,
+          "result": false
+        },
+        {
+          "id": 60,
+          "select": 2,
+          "result": false
+        },
+        {
+          "id": 51,
+          "select": 2,
+          "result": true
+        },
+        {
+          "id": 75,
+          "select": 2,
+          "result": false
+        },
+        {
+          "id": 62,
+          "select": 1,
+          "result": false
+        }
+      ],
+      "userId": 1,
+      "topicId": 2,
+      "level": "Medium",
+      "numQuestions": 5,
+      "timeLimit": 300,
+      "submittedAt": "2025-08-21T16:53:53.140Z",
+      "id": 3
+    },
+    {
+      "answers": [
+        {
+          "id": 1,
+          "select": 1,
+          "result": false
+        },
+        {
+          "id": 2,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 3,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 4,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 5,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 6,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 7,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 8,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 9,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 10,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 11,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 12,
+          "select": 2,
+          "result": true
+        },
+        {
+          "id": 13,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 14,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 15,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 16,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 17,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 18,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 19,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 20,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 21,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 22,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 23,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 24,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 25,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 26,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 27,
+          "select": 2,
+          "result": false
+        },
+        {
+          "id": 28,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 29,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 30,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 31,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 32,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 33,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 34,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 35,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 36,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 37,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 38,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 39,
+          "select": -1,
+          "result": false
+        },
+        {
+          "id": 40,
+          "select": -1,
+          "result": false
+        }
+      ],
       "userId": 1,
       "topicId": 1,
-      "questionId": 5,
-      "userAnswerIndex": 1
+      "level": "Hard",
+      "numQuestions": 40,
+      "timeLimit": 1200,
+      "submittedAt": "2025-08-21T16:57:26.703Z",
+      "id": 4
     }
   ],
-  "questions-advance":[
+  "questions-advance": [
     {
       "id": 1,
       "topicId": 1,
@@ -6807,8 +7091,8 @@
         "`background-blend-mode` chỉ áp dụng cho việc trộn màu sắc của văn bản.",
         "`background-blend-mode` tự động tạo các hiệu ứng chuyển động khi hình nền thay đổi.",
         "`background-blend-mode` là một cách để mã hóa hình nền để tăng cường bảo mật."
-      ]
-      , "correctAnswer": 0
+      ],
+      "correctAnswer": 0
     },
     {
       "id": 159,
@@ -7785,7 +8069,6 @@
     {
       "id": 240,
       "topicId": 3,
-
       "question": "Mô tả vai trò của **`Web Components`** (Custom Elements, Shadow DOM, HTML Templates) và cách chúng giúp xây dựng các UI component tái sử dụng trong JavaScript.",
       "options": [
         "Web Components là một bộ tiêu chuẩn web cho phép bạn tạo các thành phần UI có thể tái sử dụng, đóng gói, và tương tác độc lập. **Custom Elements** định nghĩa các thẻ HTML mới. **Shadow DOM** cung cấp tính đóng gói CSS và DOM. **HTML Templates** (`<template>`, `<slot>`) cho phép định nghĩa các khối HTML có thể tái sử dụng. Chúng giúp xây dựng các component không phụ thuộc framework và có khả năng tích hợp cao.",
