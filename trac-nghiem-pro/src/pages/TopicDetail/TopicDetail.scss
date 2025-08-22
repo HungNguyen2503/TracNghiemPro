@@ -106,4 +106,12 @@
   &__start{
     font-weight: 700;
   }
+  @media (max-width:768px) {
+    &__container{
+      width: 90%;
+    }
+    &__options{
+      width: 80%;
+    }
+  }
 }

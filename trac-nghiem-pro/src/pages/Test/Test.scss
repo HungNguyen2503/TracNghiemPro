@@ -1,6 +1,7 @@
 .test{
   padding: 0rem 0rem 0rem 3rem;
   display: flex;
+  flex-wrap: wrap;
   min-height: 90vh;
   position: relative;
 
@@ -103,8 +104,8 @@
   }
 
   &__avatar{
-    width: 8rem;
-    height: 8rem;
+    width: 1.6em;
+    height: 1.6em;
     aspect-ratio: 1/1;
     font-size: 5rem;
     color: #F3D4F7;
@@ -232,6 +233,53 @@
 
     &--active{
       display: flex;
+    }
+  }
+
+  @media (max-width:768px) {
+    padding: 0;
+    &__content{
+      order: 2;
+      width: 100%;
+    }
+    &__info{
+      order: 1;
+      width: 100%;
+    }
+    
+    &__avatar{
+      font-size: 3rem;
+    }
+
+    &__list{
+      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  
+      justify-content: center;
+    }
+
+    &__header{
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+    &__filed{
+      margin: 0;
+    }
+    &__question{
+      margin: 0 0.5rem 0.5rem;
+    }
+    &__question-detail{
+      margin-right: 0;
+    }
+    &__choice{
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+    &__question-detail{
+      padding: 0.5rem;
+      margin: 0.5rem;
+    }
+    &__control{
+      margin: 1rem;
     }
   }
 }

@@ -31,12 +31,34 @@
     color: #3B82F6;
   }
 
+  &__logo-name{
+    white-space: nowrap;
+  }
+
+  &__navbars{
+    font-size: 2rem;
+    color: #3B82F6;
+    display: none;
+    padding: 1rem;
+    cursor: pointer;
+
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   &__link{
     color: #EBEFFF;
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem;
-    transition: all 0.3s ease;
+    transition: all .2s ease;
+
+    &--active{
+      color: #3B82F6;
+    }
   }
   &__link:hover{
     color: #3B82F6;
@@ -48,10 +70,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    
-    &--active{
-      color: #3B82F6;
-    }
+
   }
 
   &__logout{
@@ -73,8 +92,61 @@
   }
   &__logout:hover{
     color: #3B82F6;
+    background-color: #ebefff80;
   }
+
+  @media (max-width: 576px) {
+
+    &__logo-name{
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    &__nav{
+      width: 40%;
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 5%;
+      flex-direction: column;
+      background: linear-gradient(83deg, #9ba5cf -6%, #AFB3FF 82%);
+      box-shadow: #ffffff -1px 3px 17px 1px;
+      border-radius: 0.5em;
+
+
+      > div{
+        width: 100%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px #fff solid;
+        
+        a, button{
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      > div:first-child{
+        border: none;
+      }
+      
+      &--active{
+        display: block;
+      }
+    }
+
+    &__navbars{
+      display: flex;
+    }
+  }
+
+
 }
+
 
 .main{
   position: relative;

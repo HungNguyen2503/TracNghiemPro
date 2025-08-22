@@ -67,7 +67,6 @@ const AnswerDetail = () => {
     }
   };
 
-  console.log(items);
   return (
     <section className="answer-detail">
       <div className="answer-detail__content">
@@ -137,7 +136,7 @@ const AnswerDetail = () => {
               <BeatLoader color="#3B82F6" />
             )}
 
-            <div className="test__choice">
+            <div className="answer-detail__choice">
               {!isLoading ? (
                 items?.answers?.[currentQuestion]?.options?.map(
                   (option, index) => (

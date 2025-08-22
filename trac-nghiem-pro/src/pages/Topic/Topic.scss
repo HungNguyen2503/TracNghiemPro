@@ -2,6 +2,7 @@
   padding: 0rem 0rem 0rem 3rem;
   display: flex;
   min-height: 90vh;
+  flex-wrap: wrap;
   
   &__header{
     font-size: 2rem;
@@ -93,10 +94,10 @@
   }
 
   &__avatar{
-    width: 10rem;
-    height: 10rem;
-    aspect-ratio: 1/1;
     font-size: 6rem;
+    width: 1.6em;
+    height: 1.6em;
+    aspect-ratio: 1/1;
     color: #F3D4F7;
     margin-bottom: 1rem;
     background-color: #3B82F6;
@@ -110,5 +111,28 @@
     font-size: 1rem;
     margin: 0.5rem 0;
     color: #3B82F6;
+  }
+
+  @media (max-width:576px) {
+    padding: 0;
+    &__content{
+      order: 2;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    &__info{
+      order: 1;
+      width: 100%;
+      padding: 1rem;
+    }
+
+    &__avatar{
+      font-size: 3rem;
+    }
+
+    &__list{
+      margin:  0 0 5rem 0;
+    }
   }
 }
