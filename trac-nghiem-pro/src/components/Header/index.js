@@ -47,7 +47,6 @@ const Header = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [navRef]);
-
   return (
     <header className="header">
       <div className="header__logo" onClick={handleReload}>

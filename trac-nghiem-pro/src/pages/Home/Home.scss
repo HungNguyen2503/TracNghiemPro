@@ -48,6 +48,38 @@
     }
   }
 
+  &__item-search{
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #3B82F6;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 1px;
+    
+    > p{
+      padding: 0.6em 1em;
+      border: 1px solid #3B82F6;
+      font-size: 1rem;
+      outline: none;
+      border-top: #fff 1px solid;  
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    > p:hover{
+      background-color: #3067e6;
+    }
+    > p:first-child{
+      border: none;
+    }
+
+    &--active{
+      display: block;
+    }
+  }
+
   &__popular-topics {
     width: 60%;
     max-width: 600px;
