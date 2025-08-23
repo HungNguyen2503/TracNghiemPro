@@ -6,9 +6,13 @@
 
   &__content{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     width: 70%;
-
+    >span{
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__header{
@@ -166,17 +170,14 @@
 
   &__list{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    justify-content: center;
     gap: 10px;
     list-style: none;
     padding: 0;
     margin: 3rem 0 3rem 0;
     place-items: center;
     
-    @media (max-width: 992px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
   }
 
   &__item{

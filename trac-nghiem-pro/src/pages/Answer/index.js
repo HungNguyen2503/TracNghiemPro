@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 import { BeatLoader  } from "react-spinners";
 const Answer = ()=>{
   const currentUser = useSelector(state => {
-    console.log(state)
     return  state.userReducer
   });
   const navigate = useNavigate();
@@ -52,7 +51,7 @@ const Answer = ()=>{
       <div className="answer__content">
         <h2 className="answer__header">List Test</h2>
         <ul className="answer__list">
-          {!isLoading ? [...items].map((item)=>(
+          {!isLoading ? [...items].reverse().map((item)=>(
             <li key={item.id} className="answer__item" onClick={()=>handleTopic(item.id, item.topicId, item.topicName)}>
               <div className="item">
                 <h3 className="item__topic-name"><span className="item__topic-icon"><MdSubject/></span>{item.topicName}</h3>

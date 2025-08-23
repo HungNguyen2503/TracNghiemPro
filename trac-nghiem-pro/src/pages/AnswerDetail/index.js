@@ -32,12 +32,12 @@ const AnswerDetail = () => {
       const newAnswers = answers.map((item) => {
         const findQuestion = resQuestions.find((rq) => rq.id === item.id);
         return {
-          id: item.id,
-          select: item.select,
-          result: item.result,
-          question: findQuestion.question,
-          options: findQuestion.options,
-          correctAnswer: findQuestion.correctAnswer,
+          id: item?.id,
+          select: item?.select,
+          result: item?.result,
+          question: findQuestion?.question,
+          options: findQuestion?.options,
+          correctAnswer: findQuestion?.correctAnswer,
         };
       });
 
@@ -110,78 +110,80 @@ const AnswerDetail = () => {
             </div>
           </div>
         </div>
-        <div className="answer-detail__completed">
-          <div className="answer-detail__filed">
-            <p className="answer-detail__question">
-              Question {currentQuestion + 1}
-            </p>
-            {!isLoading ? (
-              <p className="answer-detail__question-detail">
-                <span>{items?.answers?.[currentQuestion].question}</span>
-
-                {items?.answers?.[currentQuestion]?.select ===
-                items?.answers?.[currentQuestion]?.correctAnswer ? (
-                  <span className="answer-detail__icon answer-detail__icon--correct">
-                    <FaRegCheckSquare />
-                    Đúng
-                  </span>
-                ) : (
-                  <span className="answer-detail__icon answer-detail__icon--incorrect">
-                    <AiOutlineCloseSquare />
-                    Sai
-                  </span>
-                )}
+        {
+          !isLoading ? 
+          <div className="answer-detail__completed">
+            <div className="answer-detail__filed">
+              <p className="answer-detail__question">
+                Question {currentQuestion + 1}
               </p>
-            ) : (
-              <BeatLoader color="#3B82F6" />
-            )}
+              {
+                <p className="answer-detail__question-detail">
+                  <span>{items?.answers?.[currentQuestion].question}</span>
 
-            <div className="answer-detail__choice">
-              {!isLoading ? (
-                items?.answers?.[currentQuestion]?.options?.map(
-                  (option, index) => (
-                    <p key={index}>
-                      <label
-                        htmlFor={index}
-                        className={`${
-                          index === items?.answers?.[currentQuestion]?.select
-                            ? "answer-detail__label answer-detail__label--active"
-                            : "answer-detail__label"
-                        } ${
-                          index ===
-                          items?.answers[currentQuestion]?.correctAnswer
-                            ? "answer-detail__label--correct"
-                            : ""
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          className="test__radio"
-                          name="test"
-                          id={index}
-                          value={index}
-                          hidden
-                        />
-                        {String.fromCharCode(65 + index)}
-                      </label>
-                      <span>{option}</span>
-                    </p>
+                  {items?.answers?.[currentQuestion]?.select ===
+                  items?.answers?.[currentQuestion]?.correctAnswer ? (
+                    <span className="answer-detail__icon answer-detail__icon--correct">
+                      <FaRegCheckSquare />
+                      Đúng
+                    </span>
+                  ) : (
+                    <span className="answer-detail__icon answer-detail__icon--incorrect">
+                      <AiOutlineCloseSquare />
+                      Sai
+                    </span>
+                  )}
+                </p>
+                ?? !isLoading
+              }
+
+              <div className="answer-detail__choice">
+                {
+                  items?.answers?.[currentQuestion]?.options?.map(
+                    (option, index) => (
+                      <p key={index}>
+                        <label
+                          htmlFor={index}
+                          className={`${
+                            index === items?.answers?.[currentQuestion]?.select
+                              ? "answer-detail__label answer-detail__label--active"
+                              : "answer-detail__label"
+                          } ${
+                            index ===
+                            items?.answers[currentQuestion]?.correctAnswer
+                              ? "answer-detail__label--correct"
+                              : ""
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            className="test__radio"
+                            name="test"
+                            id={index}
+                            value={index}
+                            hidden
+                          />
+                          {String.fromCharCode(65 + index)}
+                        </label>
+                        <span>{option}</span>
+                      </p>
+                    )
                   )
-                )
-              ) : (
-                <BeatLoader color="#3B82F6" />
-              )}
+                  ?? !isLoading
+                }
+              </div>
+            </div>
+            <div className="answer-detail__control">
+              <span className="answer-detail__prev" onClick={handlePrevQuestion}>
+                Prev
+              </span>
+              <span className="answer-detail__next" onClick={handleNextQuestion}>
+                Next
+              </span>
             </div>
           </div>
-          <div className="answer-detail__control">
-            <span className="answer-detail__prev" onClick={handlePrevQuestion}>
-              Prev
-            </span>
-            <span className="answer-detail__next" onClick={handleNextQuestion}>
-              Next
-            </span>
-          </div>
-        </div>
+          : <BeatLoader  color="#3B82F6" />
+        }
       </div>
 
       <div className="answer-detail__info">
@@ -198,9 +200,10 @@ const AnswerDetail = () => {
         </div>
 
         <div className="answer-detail__number">
-          <ul className="answer-detail__list">
-            {!isLoading ? Array.from({ length: items?.numQuestions }).map((_, index) => (
-              <li
+          {
+            <ul className="answer-detail__list">
+              {Array.from({ length: items?.numQuestions }).map((_, index) => (
+                <li
                 key={index}
                 className={
                   items?.answers?.[index]?.select ===
@@ -209,11 +212,12 @@ const AnswerDetail = () => {
                     : "answer-detail__item"
                 }
                 onClick={() => handleQuestion(index)}
-              >
-                <span>{index + 1}</span>
-              </li>
-            )) :  <BeatLoader  color="#3B82F6" />}
-          </ul>
+                >
+                  <span>{index + 1}</span>
+                </li>))}
+            </ul>
+            ?? !isLoading
+          }
         </div>
       </div>
     </section>

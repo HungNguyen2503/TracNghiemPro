@@ -10,6 +10,7 @@ import { convertToSlug } from "../../utils/convertToSlug";
 const NUMBER_TOPIC_POPULAR = 3;
 
 const Home = () => {
+  // const 
   const allTopic = useSelector((state) => state.topicReducer);
   const [topicsPopular, setTopicsPopular] = useState([]);
   const navigate = useNavigate();

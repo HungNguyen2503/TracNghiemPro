@@ -3,7 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import "./Login.scss";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from 'react-redux';
 import { LOGIN } from './../../actions/user';
 import { checkUserLogin } from "../../services/userService";
@@ -11,6 +11,12 @@ const Login = ()=>{
   const [userLogin, setUserLogin] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const userRef = useRef(null);
+  const passwordRef = useRef(null);
+
+  useEffect(()=>{
+    setUserLogin({[userRef.current.name]: userRef.current.value, [passwordRef.current.name]: passwordRef.current.value})
+  }, []);
 
   const handleSubmit = (e)=>{
     e.preventDefault();
@@ -49,9 +55,9 @@ const Login = ()=>{
           <form className="login__form">
             <h2 className="login__title">Welcome Back</h2>
             <label htmlFor="email">Username:</label>
-            <input name="email" id="email" type="text" onChange={handleChange}/>
+            <input name="email" id="email" type="text" onChange={handleChange} value={"vana@example.com"} ref={userRef}/>
             <label htmlFor="password">Password:</label>
-            <input name="password" id="password" type="password" onChange={handleChange}/>
+            <input name="password" id="password" type="password" onChange={handleChange} value={"1"} ref={passwordRef}/>
             <input name="login" id="login" type="submit" value={"Login"} className="login__submit" onClick={handleSubmit}/>
             <p>Don't have and account?<Link to={"/register"} >Register</Link></p>
             <div className="login__socials">

@@ -4,6 +4,7 @@
   background-color: #EBEFFF;
   position: relative;
   z-index: 0;
+  color: #3B82F6;
   
   &__left{
     width: 50%;
@@ -85,7 +86,7 @@
     width: 50%;
     height: 75%;
     aspect-ratio: 2/3;
-    background-color: #656ED3;
+    background-color: #c8cbf2;
     transform: rotate(-6deg);
     top: -20%;
     left: 40%;
@@ -129,5 +130,6 @@
 
   @media (max-width: 768px) {
     overflow-x: hidden;
+    padding-top: 5rem;
   }
 }

@@ -38,7 +38,7 @@ const Test = () => {
         
       const numbers = [];
       while(numbers.length<numQuestions){
-        const numberRandom = Math.floor(Math.random() * res.length) + 1;
+        const numberRandom = Math.floor(Math.random() * res.length);
         if (!numbers.includes(numberRandom)) {
           numbers.push(numberRandom);
         }

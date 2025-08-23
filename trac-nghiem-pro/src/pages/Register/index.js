@@ -16,8 +16,8 @@ const Register = ()=>{
             <h2 className="register__title">Please Fill out form to Register</h2>
             <label htmlFor="fullname">Fullname:</label>
             <input name="fullname" id="fullname" type="text"/>
-            <label htmlFor="username">Username:</label>
-            <input name="username" id="username" type="text"/>
+            {/* <label htmlFor="username">Username:</label>
+            <input name="username" id="username" type="text"/> */}
             <label htmlFor="email">Email:</label>
             <input name="email" id="email" type="email"/>
             <label htmlFor="password">Password:</label>
