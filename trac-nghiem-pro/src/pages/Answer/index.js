@@ -12,11 +12,14 @@ import { MdSubject } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { BeatLoader  } from "react-spinners";
 const Answer = ()=>{
-  const currentUser = useSelector(state => state.userReducer);
+  const currentUser = useSelector(state => {
+    console.log(state)
+    return  state.userReducer
+  });
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  
   useEffect(()=>{
     (async()=>{
       const resTest = await getUserAllAnswer(currentUser?.id);

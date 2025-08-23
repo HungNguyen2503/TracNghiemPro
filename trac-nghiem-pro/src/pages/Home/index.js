@@ -45,16 +45,20 @@ const Home = () => {
 
 
   useEffect(() => {
-    if(inputSearch === ""){
-      setSearchTopic([]);
-      return;
-    } 
-    const search = allTopic.filter((topic) =>
-      convertToSlug(topic.name.toLowerCase()).includes(
-        convertToSlug(inputSearch.toLowerCase())
-      )
-    );
-    setSearchTopic(search);
+    try {
+      if(inputSearch === ""){
+        setSearchTopic([]);
+        return;
+      } 
+      const search = allTopic?.filter((topic) =>
+        convertToSlug(topic.name.toLowerCase()).includes(
+          convertToSlug(inputSearch.toLowerCase())
+        )
+      );
+      setSearchTopic(search);
+    } catch (error) {
+      console.log(error);
+    }
   }, [inputSearch, allTopic]);
 
 

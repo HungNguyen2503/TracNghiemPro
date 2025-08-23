@@ -1,6 +1,10 @@
 const topicReducer = ( state = null ,action ) => {
-  state = action?.payload || null;
-  return state;
+  switch(action.type){
+    case "ADD_ALL_TOPICS":
+      return action?.payload
+    default:
+      return state
+  }
 };
 
 export default topicReducer;

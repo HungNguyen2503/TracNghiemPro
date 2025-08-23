@@ -1,6 +1,6 @@
 export const ADD_ALL_TOPIC = (topics) =>{
   return {
-    type: 'ADD',
+    type: 'ADD_ALL_TOPICS',
     payload: topics
   };
 }
